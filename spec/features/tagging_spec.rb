@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'tagging links' do
 
   before :each do
-    add_link
+    add_link("yahoo.com", "Old, never used search engine")
   end
 
   scenario 'form is still submitted if no tags provided' do
@@ -14,7 +14,7 @@ feature 'tagging links' do
   context 'form filled out' do
 
     before :each do
-      add_tag
+      add_tag('#table tennis')
       submit_form
     end
 

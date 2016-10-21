@@ -25,6 +25,12 @@ class BookmarkManager < Sinatra::Base
     redirect "/"
   end
 
+  get "/tags/bubbles" do
+    @bookmark = Bookmark.new
+    erb :bubbles
+  end
+
+
 
   run! if app_file == $0
 end
